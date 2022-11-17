@@ -34,7 +34,6 @@ body {
   padding: 0;
   margin: 0;
   list-style: none;
-
 }
 
 .link {
@@ -45,6 +44,10 @@ body {
   font-style: normal;
 }
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 /* ФУТЕР */
 
 /* Логотипы футер/хедер */
@@ -82,7 +85,7 @@ body {
 /* Навигация по сайту */
 
 .header {
-    background-color: var(--white-color);
+  background-color: var(--white-color);
 }
 
 .nav-container {
@@ -118,7 +121,7 @@ body {
 }
 
 .site-nav .active {
-    color: var(--accent-color)
+  color: var(--accent-color);
 }
 
 /* Контакты */
@@ -128,11 +131,11 @@ body {
   margin-left: auto;
 }
 
-.main-contacts .item + .item{
+.main-contacts .item + .item {
   margin-left: 50px;
 }
 
-.contacts {
+.main-contacts .contacts {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -206,15 +209,15 @@ body {
 /* Секция-"преймущества" */
 
 .feature {
-    padding-top: 94px;
-    padding-bottom: 94px;
-    background-color: var(--primary-background-color);
-  }
+  padding-top: 94px;
 
-  .feature-list {
-    display: flex;
-    justify-content: center;
-  }
+  background-color: var(--primary-background-color);
+}
+
+.feature-list {
+  display: flex;
+  justify-content: center;
+}
 
 .feature-title {
   margin-top: 0;
@@ -229,7 +232,11 @@ body {
 }
 
 .feature-list .title {
-  max-width: 270px;
+  max-width: calc((100%-90px) / 4);
+}
+
+.feature-list .title:not(:last-child) {
+  margin-right: 30px;
 }
 
 .feature-list.list p {
@@ -239,18 +246,21 @@ body {
 
 /* Секция-"Чем мы занимаемся" */
 
+.work-target {
+  background-color: var(--primary-background-color);
+}
+
 .work-target-list {
   display: flex;
+}
+
+.work-target-list .title:not(:last-child) {
+  margin-right: 30px;
 }
 
 .work-target-title {
   margin-top: 0;
   margin-bottom: 50px;
-}
-
-.work-target {
-    background-color: var(--primary-background-color);
-    padding-bottom: 94px;
 }
 
 /* Секция-"Наша команда" */
@@ -259,11 +269,17 @@ body {
   display: flex;
 }
 
+.team-list .title {
+  width: calc((100%-90px) / 4);
+}
+
+.team-list .title:not(:last-child) {
+  margin-right: 30px;
+}
+
 .team {
-    background-color: var(--secondary-background-color);
-    padding-top: 94px;
-    padding-bottom: 94px;
-  }
+  background-color: var(--secondary-background-color);
+}
 
 .team-title {
   margin-top: 0;
@@ -327,7 +343,6 @@ body {
   margin-bottom: 9px;
 }
 
-
 .mail,
 .tel {
   color: rgba(255, 255, 255, 0.6);
@@ -345,9 +360,7 @@ body {
 /* Сторінка portfolio.html */
 
 .portfolio {
-    background-color: var(--primary-background-color);
-    padding-top: 94px;
-    padding-bottom: 94px;
+  background-color: var(--primary-background-color);
 }
 
 .filter-nav {
@@ -388,13 +401,16 @@ body {
 }
 
 .portfolio-block {
-  /* width: calc((100%-60px)/3); */
-  width: 370px;
-  margin-bottom: 30px;
+  width: calc((100% - 60px) / 3);
+  border-bottom: 1px solid transparent;
 }
 
 .portfolio-block:not(:nth-child(3n)) {
   margin-right: 30px;
+}
+
+.portfolio-block:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
 }
 
 .portfolio-img {
