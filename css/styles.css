@@ -19,7 +19,7 @@
 }
 
 body {
-  background-color: var(--primary-backgr ound-color);
+  background-color: var(--white-color);
   color: var(--primary-text-kolor);
 
   font-family: 'Roboto', sans-serif;
@@ -159,9 +159,14 @@ body {
 .hero {
   background-color: var(--hero-background-color);
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
+  width: 696px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 0;
   margin-bottom: 30px;
 
@@ -210,8 +215,6 @@ body {
 
 .feature {
   padding-top: 94px;
-
-  background-color: var(--primary-background-color);
 }
 
 .feature-list {
@@ -246,10 +249,6 @@ body {
 
 /* Секция-"Чем мы занимаемся" */
 
-.work-target {
-  background-color: var(--primary-background-color);
-}
-
 .work-target-list {
   display: flex;
 }
@@ -265,20 +264,24 @@ body {
 
 /* Секция-"Наша команда" */
 
+.team {
+  background: #F5F4FA;
+}
+
 .team-list {
   display: flex;
 }
 
 .team-list .title {
   width: calc((100%-90px) / 4);
+
+  background: #FFFFFF;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-list .title:not(:last-child) {
   margin-right: 30px;
-}
-
-.team {
-  background-color: var(--secondary-background-color);
 }
 
 .team-title {
@@ -304,7 +307,7 @@ body {
 
 .profession {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 30px;
 
   font-size: 16px;
   line-height: 1.18;
@@ -359,8 +362,8 @@ body {
 
 /* Сторінка portfolio.html */
 
-.portfolio {
-  background-color: var(--primary-background-color);
+.heder-portfolio {
+  border-bottom: 1px solid #ECECEC;
 }
 
 .filter-nav {
@@ -387,6 +390,7 @@ body {
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
+  cursor: pointer;
 }
 
 .nav-button:hover,
@@ -402,7 +406,8 @@ body {
 
 .portfolio-block {
   width: calc((100% - 60px) / 3);
-  border-bottom: 1px solid transparent;
+  background: #FFFFFF;
+border: 1px solid #EEEEEE;
 }
 
 .portfolio-block:not(:nth-child(3n)) {
@@ -420,6 +425,7 @@ body {
 .portfolio-title {
   margin-top: 0;
   margin-bottom: 4px;
+  margin-left: 24px;
 
   color: var(--title-text-color);
 
@@ -433,5 +439,6 @@ body {
   font-size: 16px;
   line-height: 1.87;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 20px;
+  margin-left: 24px;
 }
